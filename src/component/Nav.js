@@ -27,7 +27,7 @@ const Nav = (props) => {
                         <ul>
                             <li><Link to="/" className="navLink">Home</Link></li>
                             <li><Link to="/about" className="navLink">About</Link></li>
-                            <li><Link to="/music" className="navLink">Music</Link></li>
+                            <li><Link to="/player" className="navLink">Music</Link></li>
                         </ul>
                         <div className='logo'>
                             <img src={logo} alt="6 Town Productions logo"/>
@@ -49,7 +49,7 @@ const Nav = (props) => {
                     <ul>
                         <li><Link to="/" className="navLink">Home</Link></li>
                         <li><Link to="/about" className="navLink">About</Link></li>
-                        <li><Link to="/music" className="navLink">Music</Link></li>
+                        <li><Link to="/player" className="navLink">Music</Link></li>
                         <li><Link to="/contact" className="navLink">Contact</Link></li>
                     </ul>
                 </nav>

@@ -162,37 +162,54 @@ const Player = () => {
     }
 
     return (
-        <section>
-            <ul>
+        <section id="music" className="player">
+            <div className="border">
                 <audio ref={audioRef} src={currTrack.audio} loop={currentSong.loop}></audio>
-                <button className="prevTrack" onClick={() => { prevTrack() }}>
-                    <i className="fa-solid fa-backward-step"></i>
-                </button>
-                <button className="playPauseTrack" onClick={() => { playPause() }}>
-                    <i className={isPlaying ? "fa-solid fa-circle-pause" : "fa-solid fa-circle-play"}></i>
-                </button>
-                <button className="nextTrack" onClick={() => { nextTrack() }}>
-                    <i className="fa-solid fa-forward-step"></i>
-                </button>
-                <button className="randomTrack" onClick={() => { randomTrack() }}>
-                    <i className={isRandom ? "fa-solid fa-shuffle randomActive" : "fa-solid fa-shuffle"}></i>
-                </button>
-                <button className="repeatTrack" onClick={() => { repeatTrack() }}>
-                    <i className={currentSong.loop ? "fa-solid fa-repeat randomActive" : "fa-solid fa-repeat"}></i>
-                </button>
-            </ul>
-            <ul style={{ backgroundColor: "white" }} className="sliderContainer">
-                <li className="currentTime">{currentTime}</li>
-                <li><input ref={sliderRef} className="seekSlider" type="range" min="0" max="1" step="0.01" onClick={seekTo}
-                /></li>
-                <li className="totalDuration">{duration}</li>
-            </ul>
-            <ul style={{ backgroundColor: "white" }} className="sliderContainer">
-                <li><i className="fa-solid fa-volume-low"></i></li>
-                <li><input type="range" min="0" max="1" step="0.01" className="volumeSlider" onChange={setVolumeTo}
-                /></li>
-                <li><i className="fa-solid fa-volume-high"></i></li>
-            </ul>
+                <ul className="details">
+                    <li className="nowPlaying">PLAYING TRACK {trackIndex + 1} OF {musicList.length}</li>
+                    <li className="trackArt"><img src={currTrack.img} alt="album cover of track"/></li>
+                    <li className="trackName">{currTrack.name}</li>
+                    <li className="trackArtist">{currTrack.artist}</li>
+                </ul>
+                <ul className="sliderContainer">
+                    <li className="currentTime">{currentTime}</li>
+                    <li><input ref={sliderRef} className="seekSlider" type="range" min="0" max="1" step="0.01" onClick={seekTo}
+                    /></li>
+                    <li className="totalDuration">{duration}</li>
+                </ul>
+                <ul className="buttonsPlayer">
+                    <li className="randomTrack" onClick={() => { randomTrack() }}>
+                        <i className={isRandom ? "fa-solid fa-shuffle randomActive" : "fa-solid fa-shuffle"}></i>
+                    </li>
+                    <li className="prevTrack" onClick={() => { prevTrack() }}>
+                        <i className="fa-solid fa-backward-step"></i>
+                    </li>
+                    <li className="playPauseTrack" onClick={() => { playPause() }}>
+                        <i className={isPlaying ? "fa-solid fa-circle-pause" : "fa-solid fa-circle-play"}></i>
+                    </li>
+                    <li className="nextTrack" onClick={() => { nextTrack() }}>
+                        <i className="fa-solid fa-forward-step"></i>
+                    </li>
+                    <li className="repeatTrack" onClick={() => { repeatTrack() }}>
+                        <i className={currentSong.loop ? "fa-solid fa-repeat randomActive" : "fa-solid fa-repeat"}></i>
+                    </li>
+                </ul>
+                <ul className="sliderContainerVolume">
+                    <ul>
+                        <li><i className="fa-solid fa-volume-low"></i></li>
+                        <li className='volumeSliderContainer'><input type="range" min="0" max="1" step="0.01" className="volumeSlider" onChange={setVolumeTo}
+                        /></li>
+                        <li><i className="fa-solid fa-volume-high"></i></li>
+                    </ul>
+                    <ul>
+                        <li><i className="fa-solid fa-message" //onclick={createComment()}
+                        ></i></li>
+                        <li><i className="fa-solid fa-heart" //onclick={addLike()}
+                        ></i></li>
+                        <li><p className="likeNumber">0</p></li>
+                    </ul>
+                </ul>
+            </div>
         </section>
     )
 }

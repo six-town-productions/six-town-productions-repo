@@ -8,7 +8,7 @@ const Footer = () => {
         <footer>
             <div className="wrapper">
                 <ul>
-                    <li><Link to="/music">Music</Link></li>
+                    <li><Link to="/player">Music</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <div className='logo'>
                         <img src={logo} alt="6 Town Productions logo" />

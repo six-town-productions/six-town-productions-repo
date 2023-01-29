@@ -5,7 +5,6 @@ import { Routes, Route } from 'react-router-dom';
 // import { useState } from 'react';
 // Import Components
 import Nav from './component/Nav';
-import Header from './component/Header';
 import Player from './component/Player';
 import About from './component/About';
 import Contact from './component/Contact';

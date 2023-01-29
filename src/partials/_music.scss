@@ -80,6 +80,19 @@
     @include flex(row, nowrap, center, center);
 }
 
+.volumeSliderContainer {
+    width: 30%;
+    padding-bottom: 10px
+}
+
+.sliderContainerVolume {
+    @include flex(row, nowrap, center, center);
+    ul {
+        @include flex(row, nowrap, center, center);
+        width: 50%;
+    }
+}
+
 .seekSlider,
 .volumeSlider {
     -webkit-appearance: none;
@@ -114,7 +127,7 @@
 }
 
 .volumeSlider {
-    width: 30%;
+    width: 100%;
 }
 
 .currentTime,
