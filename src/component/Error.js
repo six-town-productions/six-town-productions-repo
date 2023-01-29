@@ -1,7 +1,7 @@
 const Error = () => {
     return (
         <section className="error">
-            <h1>404</h1>
+            <h2>404</h2>
             <p>sorry this page is still under construction</p>
         </section>
     )
