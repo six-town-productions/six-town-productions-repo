@@ -26,12 +26,15 @@
     border: 2px solid $secondaryColour;
     background-size: cover;
     background-position: center;
-    border-radius: 50%;
     -moz-box-shadow: 0px 5px 30px $secondaryColour;
     -webkit-box-shadow: 0px 5px 30px $secondaryColour;
     box-shadow: 0px 5px 30px $secondaryColour;
-    -moz-border-radius: 5%0;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
+    img {
+        border-radius: 50%;
+    }
 }
 
 .nowPlaying {
