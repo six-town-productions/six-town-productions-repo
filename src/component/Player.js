@@ -202,13 +202,13 @@ const Player = () => {
                         </li>
                         <li><i className="fa-solid fa-volume-high"></i></li>
                     </ul>
-                    <ul>
+                    {/* <ul>
                         <li><i className="fa-solid fa-message" //onclick={createComment()}
                         ></i></li>
                         <li><i className="fa-solid fa-heart" //onclick={addLike()}
                         ></i></li>
                         <li><p className="likeNumber">0</p></li>
-                    </ul>
+                    </ul> */}
                 </ul>
             </div>
         </section>
