@@ -14,7 +14,7 @@ import LandingPage from './component/LandingPage';
 import Error from './component/Error';
 
 function App() {
-  const [timer, setTimer] = useState(3)
+  const [timer, setTimer] = useState(2)
 
   useEffect(() => {
     if (timer > 0) {
