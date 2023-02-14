@@ -47,10 +47,10 @@ const Nav = (props) => {
                 </button>
                 <nav>
                     <ul>
-                        <li><Link to="/" className="navLink">Home</Link></li>
-                        <li><Link to="/about" className="navLink">About</Link></li>
-                        <li><Link to="/player" className="navLink">Music</Link></li>
-                        <li><Link to="/contact" className="navLink">Contact</Link></li>
+                        <li><Link to="/" className="navLink" onClick={toggleClass}>Home</Link></li>
+                        <li><Link to="/about" className="navLink" onClick={toggleClass}>About</Link></li>
+                        <li><Link to="/player" className="navLink" onClick={toggleClass}>Music</Link></li>
+                        <li><Link to="/contact" className="navLink" onClick={toggleClass}>Contact</Link></li>
                     </ul>
                 </nav>
             </div>
